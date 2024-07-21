@@ -48,3 +48,27 @@ let p1 = new Person("Sumit", 26)
 console.log(p1);
 console.log(p1.canSleep());
 Person.greet();
+
+
+// Question2nd 
+
+class Employee extends Person {
+    #salary
+    constructor(name, age, salary) {
+        super(name, age)
+        this.#salary;
+    }
+
+    get salary() {
+        return this.#salary
+    }
+
+    set salary(val) {
+        this.#salary = val
+    }
+}
+
+let e1 = new Employee("Abhishek", 23, 20000)
+console.log(e1);
+e1.salary = 50000
+console.log(e1.salary);
