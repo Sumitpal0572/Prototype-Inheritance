@@ -72,3 +72,25 @@ let e1 = new Employee("Abhishek", 23, 20000)
 console.log(e1);
 e1.salary = 50000
 console.log(e1.salary);
+
+
+// Question3rd
+
+class Manager extends Employee {
+    constructor(name, age) {
+        super(name, age)
+    }
+
+    static getRole() {
+        console.log("Manager");
+    }
+
+    managing() {
+        return `${this.name} is managing`;
+    }
+}
+
+let manager = new Manager("Sumit", 35)
+console.log(manager);
+console.log(manager.managing());
+Manager.getRole();
