@@ -63,3 +63,25 @@ let a1 = new Account("State bank of india", 20000)
 console.log(a1);
 console.log(a1.Name);
 console.log(a1.balance)
+
+class SavingsAccount extends Account {
+    #interestRate
+    constructor(name, balance, interesRate) {
+        super(name, balance)
+        this.#interestRate = interesRate;
+    }
+    get interesRate() {
+        return this.#interestRate
+    }
+
+    set interesRate(val) {
+        this.#interestRate = val
+    }
+}
+
+let s1 = new SavingsAccount("State bank of india", 200, 10 )
+console.log(s1);
+console.log(s1.interesRate);
+
+s1.interesRate=20;
+console.log(s1.interesRate);
