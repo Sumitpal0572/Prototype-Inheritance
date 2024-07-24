@@ -27,6 +27,9 @@
 // - Implement a getter method (interestRate) for the interestRate property within the SavingsAccount class. This getter should return the value of the interestRate field.
 // - Implement a setter method (interestRate) for the interestRate property. This setter should update the interestRate field with the provided value.
 
+
+// problem1st
+
 class Bank {
     #name
     constructor(name) {
@@ -40,3 +43,23 @@ class Bank {
 
 let b1 = new Bank("State bank of india")
 console.log(b1.Name);
+
+
+// problem2nd
+
+class Account extends Bank {
+    #balance
+    constructor(name, balance) {
+        super(name)
+        this.#balance = balance;
+    }
+
+    get balance() {
+        return this.#balance
+    }
+}
+
+let a1 = new Account("State bank of india", 20000)
+console.log(a1);
+console.log(a1.Name);
+console.log(a1.balance)
