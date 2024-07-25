@@ -71,10 +71,20 @@ console.log(a1);
 
 class Mammal extends Animal {
     constructor(type) {
-      super(type);
+        super(type);
     }
-  }
-  
-  let m1 = new Mammal("birds");
-  console.log(m1);
-  
+}
+
+let m1 = new Mammal("birds");
+console.log(m1);
+
+
+//Class Bird extends from Animal
+class Bird extends Animal {
+    constructor(type) {
+        super(type);
+    }
+}
+
+let b1 = new Bird("crow");
+console.log(b1);
