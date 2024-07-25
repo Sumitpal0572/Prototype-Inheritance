@@ -113,7 +113,7 @@ class Lion extends Mammal {
   console.log(l1.maneColor);
 
   //Class Eagle extends from Bird Class
-  
+
 class Eagle extends Bird {
     #wingspan;
     constructor(type) {
@@ -134,3 +134,28 @@ class Eagle extends Bird {
   e1.wingspan = "small";
   console.log(e1.wingspan);
   console.log(e1);
+
+  //class Sparrow extends from class Bird
+  
+class Sparrow extends Bird {
+    #wingspan;
+    constructor(type) {
+      super(type);
+      this.#wingspan = "small";
+    }
+  
+    get wingspan() {
+      return this.#wingspan;
+    }
+  
+    set wingspan(val) {
+      return (this.#wingspan = val);
+    }
+  }
+  
+  let s1 = new Sparrow("bird");
+  console.log(s1);
+  console.log(s1.wingspan);
+  s1.wingspan = "medium";
+  console.log(s1.wingspan);
+  console.log(s1);
