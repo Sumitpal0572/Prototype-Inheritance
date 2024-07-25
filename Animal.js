@@ -50,6 +50,9 @@
 //   - Implement a getter method called wingspan within the Sparrow class. This method should return the value of the wingspan field.
 //   - Implement a setter method called wingspan within the Sparrow class. This setter should update the wingspan field with the provided value.
 
+
+// Animalclass
+
 class Animal {
     #type;
     constructor(type) {
@@ -63,3 +66,15 @@ class Animal {
 
 let a1 = new Animal("mammal");
 console.log(a1);
+
+//Class Mammal extends from Animal Class
+
+class Mammal extends Animal {
+    constructor(type) {
+      super(type);
+    }
+  }
+  
+  let m1 = new Mammal("birds");
+  console.log(m1);
+  
