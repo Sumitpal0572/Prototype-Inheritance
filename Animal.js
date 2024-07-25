@@ -88,3 +88,26 @@ class Bird extends Animal {
 
 let b1 = new Bird("crow");
 console.log(b1);
+
+//Class Lion extends from Mammal
+
+class Lion extends Mammal {
+    #maneColor;
+    constructor(type, maneColor) {
+      super(type);
+      this.#maneColor = maneColor;
+    }
+    get maneColor() {
+      return this.#maneColor;
+    }
+  
+    set maneColor(val) {
+      return (this.#maneColor = val);
+    }
+  }
+  
+  let l1 = new Lion("Mammal", "brown");
+  console.log(l1);
+  console.log(l1.maneColor);
+  l1.maneColor = "red";
+  console.log(l1.maneColor);
